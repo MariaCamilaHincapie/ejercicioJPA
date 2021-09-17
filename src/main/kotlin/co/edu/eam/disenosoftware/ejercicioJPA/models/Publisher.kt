@@ -1,9 +1,12 @@
 package co.edu.eam.disenosoftware.ejercicioJPA.models
 
+import java.io.Serializable
 import javax.persistence.Column
+import javax.persistence.Entity
 import javax.persistence.Id
 import javax.persistence.Table
 
+@Entity
 @Table(name = "editorial")
 data class Publisher (
     @Id
@@ -12,4 +15,4 @@ data class Publisher (
 
     @Column(name = "nombre_editorial")
     var name: String,
-)
+):Serializable

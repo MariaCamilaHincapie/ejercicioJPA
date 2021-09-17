@@ -1,11 +1,13 @@
 package co.edu.eam.disenosoftware.ejercicioJPA.models
 
+import java.io.Serializable
 import javax.persistence.*
 
+@Entity
 @Table(name = "libro_autor")
 data class AuthorBook (
     @Id
-    @Column(name = "id")
+    //@Column(name = "id")
     val id: Long,
 
     @ManyToOne
@@ -15,4 +17,4 @@ data class AuthorBook (
     @ManyToOne
     @JoinColumn(name = "id_libro")
     var book: Book,
-        )
+):Serializable
